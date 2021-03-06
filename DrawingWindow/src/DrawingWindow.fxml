@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
 
-
-<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DrawingWindowController">
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DrawingWindowController">
    <children>
-      <Canvas fx:id="canvas" height="350.0" layoutY="58.0" width="660.0" />
+      <Canvas fx:id="canvas" height="621.0" layoutY="80.0" width="1200.0" />
+      <Pane fx:id="propertiesPane" prefHeight="80.0" prefWidth="1200.0" style="-fx-background-color: lightGrey;">
+         <children>
+            <ColorPicker fx:id="colorPicker" layoutY="24.0" prefHeight="35.0" prefWidth="125.0">
+               <value>
+                  <Color />
+               </value>
+            </ColorPicker>
+            <MenuBar layoutY="-1.0" prefHeight="20.0" prefWidth="1200.0" style="-fx-background-color: lightGrey;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Line endX="1036.0" endY="-0.40000343322753906" layoutX="164.0" layoutY="25.0" startX="-164.00001525878906" startY="-1.0000019073486328" stroke="#a2a1a1a8" />
+         </children>
+      </Pane>
    </children>
 </Pane>
